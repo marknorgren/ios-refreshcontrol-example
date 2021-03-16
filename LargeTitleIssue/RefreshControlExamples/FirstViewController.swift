@@ -16,19 +16,16 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        
-        self.extendedLayoutIncludesOpaqueBars = true
-        self.edgesForExtendedLayout = .all
-
+    
         setupRefreshControl()
         setupCollectionView()
     }
 
     func setupCollectionView() {
-        self.view.addSubview(collectionView)
+        view.addSubview(collectionView)
         collectionView.fillSuperview()
         collectionView.backgroundColor = .clear
-        collectionView.contentInsetAdjustmentBehavior = .always
+        collectionView.contentInset = .init(top: 8, left: 8, bottom: 8, right: 8)
         collectionView.register(ExampleCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.dataSource = self
     }
@@ -42,6 +39,11 @@ class FirstViewController: UIViewController {
         print("refresh")
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
             self?.refreshControl.endRefreshing()
+            self?.collectionView.performBatchUpdates({
+                let indexSet = IndexSet(integer: 0)
+                self?.collectionView.reloadSections(indexSet)
+            }, completion: nil)
+
         }
     }
 }

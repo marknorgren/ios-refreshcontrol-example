@@ -34,6 +34,11 @@ class ExampleCollectionViewController: UICollectionViewController {
         print("refresh")
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
             self?.refreshControl.endRefreshing()
+            self?.collectionView.performBatchUpdates({
+                let indexSet = IndexSet(integer: 0)
+                self?.collectionView.reloadSections(indexSet)
+            }, completion: nil)
+
         }
     }
 }

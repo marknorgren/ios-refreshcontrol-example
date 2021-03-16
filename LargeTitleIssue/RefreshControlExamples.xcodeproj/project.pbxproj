@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1FF86626010E34005A8946 /* WorkaroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1FF86526010E34005A8946 /* WorkaroundViewController.swift */; };
 		4DC8276625FFF32F00BAF975 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8276525FFF32F00BAF975 /* AppDelegate.swift */; };
 		4DC8276825FFF32F00BAF975 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8276725FFF32F00BAF975 /* SceneDelegate.swift */; };
 		4DC8276D25FFF33000BAF975 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC8276B25FFF33000BAF975 /* Main.storyboard */; };
@@ -18,9 +19,11 @@
 		4DC827A025FFF85000BAF975 /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8279F25FFF85000BAF975 /* ExampleCell.swift */; };
 		4DC827A725FFFB9300BAF975 /* ExampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC827A625FFFB9300BAF975 /* ExampleCollectionViewController.swift */; };
 		4DC827AC2600038C00BAF975 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC827AB2600038C00BAF975 /* CollectionViewAdapter.swift */; };
+		4DC827C02600F1BC00BAF975 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC827BF2600F1BC00BAF975 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D1FF86526010E34005A8946 /* WorkaroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkaroundViewController.swift; sourceTree = "<group>"; };
 		4DC8276225FFF32F00BAF975 /* RefreshControlExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefreshControlExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC8276525FFF32F00BAF975 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC8276725FFF32F00BAF975 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		4DC8279F25FFF85000BAF975 /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		4DC827A625FFFB9300BAF975 /* ExampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewController.swift; sourceTree = "<group>"; };
 		4DC827AB2600038C00BAF975 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
+		4DC827BF2600F1BC00BAF975 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				4DC8277A25FFF3D700BAF975 /* MainController.swift */,
 				4DC8279625FFF56900BAF975 /* FirstViewController.swift */,
 				4DC827A625FFFB9300BAF975 /* ExampleCollectionViewController.swift */,
+				4D1FF86526010E34005A8946 /* WorkaroundViewController.swift */,
 				4DC8279F25FFF85000BAF975 /* ExampleCell.swift */,
 				4DC8276B25FFF33000BAF975 /* Main.storyboard */,
 				4DC8276E25FFF33100BAF975 /* Assets.xcassets */,
@@ -78,6 +83,7 @@
 				4DC8277325FFF33100BAF975 /* Info.plist */,
 				4DC8279C25FFF77A00BAF975 /* UIView+Layout.swift */,
 				4DC827AB2600038C00BAF975 /* CollectionViewAdapter.swift */,
+				4DC827BF2600F1BC00BAF975 /* SecondViewController.swift */,
 			);
 			path = RefreshControlExamples;
 			sourceTree = "<group>";
@@ -152,9 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1FF86626010E34005A8946 /* WorkaroundViewController.swift in Sources */,
 				4DC827A025FFF85000BAF975 /* ExampleCell.swift in Sources */,
 				4DC827A725FFFB9300BAF975 /* ExampleCollectionViewController.swift in Sources */,
 				4DC8279725FFF56900BAF975 /* FirstViewController.swift in Sources */,
+				4DC827C02600F1BC00BAF975 /* SecondViewController.swift in Sources */,
 				4DC8277B25FFF3D700BAF975 /* MainController.swift in Sources */,
 				4DC8276625FFF32F00BAF975 /* AppDelegate.swift in Sources */,
 				4DC8279D25FFF77A00BAF975 /* UIView+Layout.swift in Sources */,

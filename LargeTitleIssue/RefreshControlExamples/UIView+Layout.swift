@@ -5,6 +5,7 @@
 //  Created by Brian Voong on 9/30/18.
 //  Copyright © 2018 Brian Voong. All rights reserved.
 //
+// https://github.com/bhlvoong/LBTAComponents
 
 import UIKit
 
@@ -109,18 +110,13 @@ extension UIView {
     @discardableResult
     open func fillSuperviewSafeAreaLayoutGuide(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
         let anchoredConstraints = AnchoredConstraints()
-        if #available(iOS 11.0, *) {
-            guard let superviewTopAnchor = superview?.safeAreaLayoutGuide.topAnchor,
-                let superviewBottomAnchor = superview?.safeAreaLayoutGuide.bottomAnchor,
-                let superviewLeadingAnchor = superview?.safeAreaLayoutGuide.leadingAnchor,
-                let superviewTrailingAnchor = superview?.safeAreaLayoutGuide.trailingAnchor else {
-                    return anchoredConstraints
-            }
-            return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
-
-        } else {
-            return anchoredConstraints
+        guard let superviewTopAnchor = superview?.safeAreaLayoutGuide.topAnchor,
+            let superviewBottomAnchor = superview?.safeAreaLayoutGuide.bottomAnchor,
+            let superviewLeadingAnchor = superview?.safeAreaLayoutGuide.leadingAnchor,
+            let superviewTrailingAnchor = superview?.safeAreaLayoutGuide.trailingAnchor else {
+                return anchoredConstraints
         }
+        return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
     }
 
     open func centerInSuperview(size: CGSize = .zero) {
