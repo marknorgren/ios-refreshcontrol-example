@@ -3,15 +3,21 @@
 
 ## Large Title Issue Examples
 
-Tabs showing examples with RefreshControl and Large Title
+Tabs showing examples with RefreshControl and Large Title.
 
-1. CollectionView
+When adding a `UICollectionView` as a subview that is contained in a `UINavigationController` that uses Large Titles 
+the Refresh Control does not behave as expectd.
+
+
+1. CollectionView (showing issue)
    
    This shows this the issue with the refresh control.
    It's state is 'refreshing' almost immediately after dragging just a few pixels.
+   
 2. CollectionVC
 
-    This is a working example. The RefreshControl works as expected with the `NavigationController`'s root view controller is a `UICollectionViewController`.
+    This is a working example. The RefreshControl works as expected when the `UINavigationController`'s root view controller is a `UICollectionViewController`.
+    
 3. Workaround
 
     The workaround resolves the issue.
